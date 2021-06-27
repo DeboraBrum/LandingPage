@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+}
+:root {
+  --title-font: 4rem;
+  --text-font: 1.5rem;
+  --logo-font: 1.5rem;
+}
+.container {
+  padding-top: 4.875rem;
+  margin-right: 3.25rem;
+  margin-left: 3.25rem;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+header h1 {
+  font-weight: 700;
+  font-size: var(--logo-font);
+  color: #d2872c;
+}
+nav a {
+  text-decoration: none;
+  color: #766f68;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #d2872c;
+}
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+.icon-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/*---HOME----*/
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-left: 3rem;
+}
+.image {
+  order: 2;
+}
+.image img{
+  width: 54rem; 
+  height: 28rem;
+}
+
+.text {
+  color: #766f68;
+  order: 1;
+}
+.text h1 {
+  font-weight: 700;
+  font-size: var(--title-font);
+  margin-bottom: 2.75rem;
+}
+.text p {
+  font-size: var(--text-font);
+  margin-bottom: 4.25rem;
+}
+.button {
+  height: 5.375rem;
+  display: inline-flex;
+  align-items: center;
+  background-color: #d2872c;
+  color: white;
+  text-decoration: none;
+  font-size: 1.75rem;
+  padding: 0 6.875rem;
+  border-radius: 1.25rem;
+  margin-bottom: 3.125rem;
+  transition: opacity 0.3s;
+}
+.button:hover {
+  opacity: 0.5;
+}
+
+/*-----MEDIA QUERIES--*/
+
+/*--para celular--*/
+
+@media (max-width: 992px) {
+  :root {
+    --title-font: 2.5rem;
+    --text-font: 1rem;
+    --logo-font: 2rem;
+  }
+  .menu {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+  .icon-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+  .container {
+    padding-top: 2.75rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+
+    background-image: none;
+  }
+  header {
+    margin-bottom: 5rem;
+  }
+  .home {
+    margin-left: 0;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .image {
+    order: 1;
+    display: inline-flex;
+    margin-bottom: 3.3rem;
+  }
+  .image img {
+    width: 100%;
+    height: 100%;
+  }
+  .text {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .text h1 {
+    margin-bottom: 0;
+  }
+  .text p {
+    margin-bottom: 0;
+  }
+  .button {
+    height: 4rem;
+    font-size: 1.5rem;
+  }
+}
